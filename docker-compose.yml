@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  postgres-todo-db:
+    container_name: todo-db
+    image: postgres:latest
+    ports:
+      - 35432:5432
+
+    environment:
+      - POSTGRES_DB=todo-db-psql
+      - POSTGRES_USER=tododb-user
+      - POSTGRES_PASSWORD=tododb123
+      
